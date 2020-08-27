@@ -1,4 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
 .nav-hover:hover{
-    background-color: #0056b3;
+    background-color: rgba(29,161,242,0.3);
+    color:rgba(29,161,242,1) !important;
+    text-decoration: none;
+    border-radius: 58px 58px 58px 58px;;
+}
+
+.nav__icon__div{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+.navigation__icons{
     color:white;
+}
+
+.nav__font{
+    font-family: 'Rowdies', cursive;
+    font-size: 20px;
+}
+.nav__link{
+    display: flex;
+    align-items: center;
 }

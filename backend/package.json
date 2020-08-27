@@ -12,12 +12,18 @@
   "license": "ISC",
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "mongoose": "^5.9.25"
+    "mongoose": "^5.9.25",
+    "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

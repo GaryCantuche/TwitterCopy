@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+.signin__background{
+    background-image: url('./../images/blue_smoke_background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+}
+
+.signin__title__font{
+    font-family: 'Sriracha', cursive;
+}

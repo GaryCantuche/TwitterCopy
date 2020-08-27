@@ -1,6 +1,7 @@
 import express from "express";
 import router from './router';
 import serverConfig from './config';
+import middlewares from './middlewares/middlewares';
 import {config} from 'dotenv';
 import database from './database';
 
@@ -8,7 +9,6 @@ const app = express();
 const SETTINGS = config();
 
 require('./auth/local-auth');
-
 serverConfig(app);
 router(app);
 

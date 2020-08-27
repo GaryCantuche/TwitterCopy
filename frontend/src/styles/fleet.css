@@ -1,0 +1,46 @@
+.fleet{
+    height: 4vh;
+}
+
+.fleet__avatar{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.fleet__body{
+    flex:1;
+}
+
+.fleet__footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.fleet__verified__button{
+    color:rgb(50, 138, 238);
+}
+
+.fleet__buttons{
+    cursor: pointer;
+    color: white;
+    font-size: large;
+    padding: 2px;
+}
+
+.fleet__buttons__outside{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.fleet__buttons__outside:hover{
+    background-color: rgb(12, 101, 131);
+    border-radius: 50%;
+
+}

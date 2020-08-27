@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 .vh-5{
     height: 5vh;
 }
@@ -12,11 +14,11 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color:rgb(21, 32, 43);
-    font-family: "Roboto";
+    font-family: "Roboto" sans-serif;
 }
 
 .tweet-box{
-    border-bottom: 0.5px solid lightgray;
+    border-bottom: 0.5px solid grey;
 }
 
 textarea{
@@ -30,3 +32,23 @@ textarea{
 textarea::placeholder{
     color: grey;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

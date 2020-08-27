@@ -2,9 +2,9 @@ import React from 'react';
 
 function TopBar (props) {
     return (
-        <div className="row mt-3 tweet-box">
-            <div className="col-sm mw-100">
-                <h1 className="text-center text-white">{props.text}</h1>
+        <div className="row tweet-box">
+            <div className="col-sm">
+                <h3 className="p-2 text-white">{props.text}</h3>
             </div>     
         </div>
     );
