@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function ProfileEditModalForm() {
-    const [profileValues,setProfileValues] = useState(
-        {
-            description:'',
-            location:'',
-            website:'',
-            date:''
-        }   
-    );
+    const [profileValues,setProfileValues] = useState({});
 
     const [profileImage,setProfileImage] = useState('');
 
@@ -34,36 +27,43 @@ function ProfileEditModalForm() {
         setBannerImage(e.target.files[0]);
     }
 
-    const onSubmit = async (e) => {
-        e.preventDefault();
-
+    const sendProfileImages = async () => {
         const formData = new FormData();
         formData.append('profileImage',profileImage);
         formData.append('bannerImage',bannerImage);
 
-        const uploadedImage = await axios.post( "http://localhost:9000/uploadProfilePhoto",formData,{
+        const uploaded = await axios.post( "http://localhost:9000/uploadProfilePhoto",formData,{
             headers:{
                 'content-type': 'multipart/form-data'
             },
             withCredentials:true
         });
 
-        if(!uploadedImage.data.isSaved){
-            alert('Image is not been saved!');
-        }
+        return uploaded;
+    }
 
-        axios.post('http://localhost:9000/uploadProfile',{
+    const sendProfileValues = async () => {
+        return await axios.post( "http://localhost:9000/uploadProfile",{
             profileValues:profileValues
         },{
             withCredentials:true
-        })
-        .then(res => {
-            if(!res.data.isSaved){
-                alert('Profile values not been updated');
-            }
-        }).catch(err => {
-            console.log(err);
         });
+    }
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
+        const uploadedImage = await sendProfileImages();
+
+        if(!uploadedImage.data.isSaved){
+            alert('Image is not been saved!');
+        }
+        
+        const uploadedProfileValues = await sendProfileValues();
+
+        if(!uploadedProfileValues.data.isSaved){
+            alert('Profile values not been updated');
+        }
     }
 
     return(

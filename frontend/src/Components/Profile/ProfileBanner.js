@@ -7,8 +7,8 @@ function ProfileBanner (props) {
     return (
         <div className="row">
             <div className="col-sm p-0">
-                <ProfileAvatar username={props.user.username}/>
-                <ImageBanner />
+                <ProfileAvatar image={props.user.profileImage}/>
+                <ImageBanner image={props.user.bannerImage}/>
                 <ProfileDetails user={props.user} />
             </div>
             

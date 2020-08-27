@@ -19,7 +19,7 @@ function Profile () {
                 user:user
             },{
                 withCredentials:true
-            }).then(res => {    
+            }).then(res => {
                 if(!userData){
                     setUserData(res.data);
                 }

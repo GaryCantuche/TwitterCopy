@@ -7,7 +7,7 @@ import userData from './Router/userData';
 import userFleets  from './Router/userFleets';
 import uploadUserProfile  from './Router/uploadProfile';
 import uploadProfilePhoto  from './Router/uploadProfilePhoto';
-import userProfileImage from './Router/userProfileImage';
+
 export default (app) => {
     app.use('/storeMessage',storeMessage); 
     app.use('/login',login);   
@@ -18,5 +18,4 @@ export default (app) => {
     app.use('/userFleets',userFleets);
     app.use('/uploadProfile',uploadUserProfile);
     app.use('/uploadProfilePhoto',uploadProfilePhoto); 
-    app.use('/profileImage',userProfileImage);
 }
