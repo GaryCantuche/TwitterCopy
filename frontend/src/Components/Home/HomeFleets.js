@@ -8,13 +8,13 @@ function HomeFleets () {
         axios.get('http://localhost:9000/fleetsList',{
             withCredentials:true
         }).then(res => {
-            if(res.data){
+            if(!fleets){
                 setFleets(res.data);
             }
         }).catch(err => {
             console.log(err);
         });
-    },[]);
+    },[fleets]);
     return (
         <FleetsView fleetsList={fleets} />
     );

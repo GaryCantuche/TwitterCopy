@@ -6,6 +6,7 @@
     width: 75px;
     height: 75px;
     border-radius: 50%;
+    border:1px solid black;
 }
 
 .fleet__body{

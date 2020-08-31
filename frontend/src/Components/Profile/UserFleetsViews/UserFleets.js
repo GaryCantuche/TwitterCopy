@@ -3,11 +3,11 @@ import FleetsView from './../../FleetView/FleetsView';
 import Axios from 'axios';
 function UserFleets(props) {
     const [userFleets,setUserFleets] = useState();
-    const {_id} = props;
+    const {user} = props;
     useEffect(() => {
         Axios.get(`http://localhost:9000/userFleets`,{
             params:{
-                username:_id
+                username:user.username
             }
         },{
             withCredentials:true
@@ -16,7 +16,7 @@ function UserFleets(props) {
                 setUserFleets(res.data);
             }
         });
-    },[_id]);
+    },[user]);
 
     return(
         <FleetsView fleetsList={userFleets}/>

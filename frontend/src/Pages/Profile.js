@@ -34,7 +34,7 @@ function Profile () {
 
     if(userData){
         return (
-            <div className="container w-50 border-left border-right border-secondary">
+            <div style={styles} className="container border-left border-right border-secondary">
                 <TopBarProfile user={userData.username} />
                 <ProfileBanner user={userData} />
                 <UserFleetsViews user={userData} location={location.pathname}/>
@@ -50,6 +50,10 @@ function Profile () {
             <Loading />
         );
     }
+}
+
+const styles = {
+    width:"33%"
 }
 
 export default Profile;

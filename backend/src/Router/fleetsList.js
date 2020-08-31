@@ -1,7 +1,7 @@
 import express from 'express';
 import {isAuthenticated} from '../middlewares/authMiddlewares';
 import Fleet from '../models/fleet';
-import User from '../models/user';
+import { addUserPropertiesToFleet } from '../Controllers/fleetImage.controller';
 
 const router = express.Router();
 
@@ -10,22 +10,10 @@ router.get('/',(req,res,next) => {
 }, async (req,res) => {
     const fleets = await Fleet.find();
 
-    let data = await Promise.all(
-        fleets.map(async (fleet) => {
-            const user = await User.findOne({_id:fleet.userID});
-            let data1 = JSON.parse(JSON.stringify(fleet));
-            if(user){
-                data1.verified = user.verified;
-                return data1;
-            }
-    }));
+    let data = await addUserPropertiesToFleet(fleets);
 
     data = data.filter((item) => {
-        if(item == undefined){
-            return false;
-        }else{
-            return true
-        }
+        return item !== undefined;
     });
     
 

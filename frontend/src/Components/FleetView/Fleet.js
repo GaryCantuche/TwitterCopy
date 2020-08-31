@@ -14,7 +14,7 @@ function Fleet (props) {
         <div key={index} className="d-flex flex-wrap mt-2 w-100 p-2 border-bottom border-secondary">
             <div className="h-100">
                     <div className="" >
-                        <img alt="User profile" className="fleet__avatar" src={avatar}/>
+                        <img alt="User profile" className="fleet__avatar" src={fleet.profileImage ? `data:image/png;base64,${fleet.profileImage}` : avatar}/>
                     </div>
             </div>
             <div className="fleet__body">

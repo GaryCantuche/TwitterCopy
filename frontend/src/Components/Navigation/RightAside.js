@@ -2,12 +2,13 @@ import React from 'react';
 
 function RightAside () {
     return (
-        <div style={styles} className="w-25 d-flex justify-content-end">
+        <div style={styles} className="d-flex justify-content-end">
         </div>
     );
 }
 
 const styles = {
+    width:"33%",
     height:"100vh"
 }
 
