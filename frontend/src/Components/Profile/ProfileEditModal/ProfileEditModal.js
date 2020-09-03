@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfileEditModalForm from './ProfileEditModalForm';
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 
 function ProfileEditModal () {  
     
@@ -8,7 +9,10 @@ function ProfileEditModal () {
             <div className="modal-dialog modal-dialog-centered" role="document">
                 <div className="modal-content profile__edit__modal w-100">
                     <div className="modal-header">
-                        <h5 className="modal-title text-white" id="exampleModalLongTitle">Profile Edit</h5>
+                        <div className="w-100 modal-title profile__edit__modal__header text-white">
+                            <PersonOutlineIcon className="mr-2" fontSize="large"/> 
+                            <h5 id="exampleModalLongTitle">Profile Edit</h5>    
+                        </div>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>

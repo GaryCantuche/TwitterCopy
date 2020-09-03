@@ -40,9 +40,7 @@ export function getCurrentUserName() {
 }
 
 export function isAuthenticated(username){
-  console.log(username);
     const user = JSON.parse(window.localStorage.getItem('sessionData'));
-    console.log(user);
     if(username === user.username){
       console.log('hola');
       return true;

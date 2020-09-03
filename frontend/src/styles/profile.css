@@ -121,6 +121,12 @@
     border-bottom: 2px solid rgba(29,161,242,1);
 }
 
+.profile__edit__modal__header{
+    color:rgba(29,161,242,1) !important;
+    display: flex;
+    align-items: center;
+}
+
 .profile__edit__modal__fields{
     background-color:rgba(37,56,75,0.5);
     border:none;
@@ -134,5 +140,10 @@
     outline: none;
     box-shadow: none;
     border-bottom: 2px solid rgba(29,161,242,1);
+    color:white;
+}
+
+.profile__edit__modal__form__submit__button{
+    background-color:rgba(29,161,242,1) !important;
     color:white;
 }

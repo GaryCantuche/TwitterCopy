@@ -9,5 +9,3 @@ function ProfileAvatar (props) {
 }
 
 export default ProfileAvatar;
-//
-//

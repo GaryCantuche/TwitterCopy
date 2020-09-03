@@ -94,7 +94,7 @@ function ProfileEditModalForm() {
             </div>
             <div className="col-sm mt-3 d-flex justify-content-end">
                 <button type="button" className="btn btn-secondary mr-3" data-dismiss="modal">Close</button>
-                <button type="submit" className="btn btn-primary">Save changes</button>
+                <button type="submit" className="btn profile__edit__modal__form__submit__button">Save changes</button>
             </div>
            
         </form>
