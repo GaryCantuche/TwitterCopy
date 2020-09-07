@@ -15,7 +15,7 @@ import NotLoggedBanner from './Components/Auth/NotLoggedBanner';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter  baseline="/">
       <Switch>
         <Route exact path="/" >
          <Redirect to={"/signin"} />
