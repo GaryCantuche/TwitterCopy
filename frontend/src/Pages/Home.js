@@ -16,16 +16,12 @@ function Home () {
     }, [userUID,history])
     
     return (
-        <div style={styles} className="container border-left border-right border-secondary m-0">
+        <div className="container home border-left border-right border-secondary m-0 p-0">
             <TopBar text="Home" />            
             <MessageForm />
             <HomeFleets />
         </div>
     );
-}
-
-const styles = {
-    width:"33%"
 }
 
 

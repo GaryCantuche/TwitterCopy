@@ -1,5 +1,11 @@
+
+.profile{
+    width: 33%;
+}
+
 .profile__topbar__icon{
     color:rgba(29,161,242,1) !important;
+    margin-left: 1vh;
 }
 
 .profile__topbar__icon__outside{
@@ -12,13 +18,18 @@
     border-radius: 50%;
 }
 
+.profile__banner{
+    width: 100%;
+    height: 45vh;
+}
+
 .profile__banner__img__div{
-    height: 12vw;
-    
+    width: 100%;
+    height:20vh ;
 }
 
 .profile__banner__img{
-    height: 12vw;
+    height: 100%;
     width: 100%;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
@@ -30,28 +41,39 @@
 }
 
 .profile__banner__details{
-    height: 14vw;
+    height:max(25vh,30%);
     width:100% ;    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom:1px solid grey ;
+    align-items: baseline;
+}
+.profile__details__text{
+    font-size: clamp(1rem,1.20rem,2vw);
 }
 
-.profile__avatar{
-    width: 8vw;
-    height: 8vw;
-    position: absolute;
-    z-index: 1;
-    top: 28%;  
-    margin-left: 2vh;
-    border-radius: 50%;
+.profile__details__username{
+    width: 100%;
+    height: 20%;
+}
+.profile__details__description{
+    width: 100%;
+    height: 20%;
+}
+
+.profile__details__followers{
+    width: 100%;
+    height: 20%;
 }
 
 .profile__avatar__image{
-    width: 8vw;
-    height: 8vw;
+    width:max(125px,8vw);
+    height:max(125px,8vw);
     border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: clamp(20%,25%,30%);  
+    margin-left: 2vh;
 }
 
 .profile__edit__button{
@@ -76,31 +98,32 @@
     background-color:rgba(29,161,242,0.1);
 }
 
-.profile__details__text{
-    font-size: 1vw;
-}
-
 .profile__edit__modal{
     background-color:rgb(21, 32, 43);
 }
 
 .profile__navigation{
-    height: 3vw;
+    width:100%;
+    height: max(50px,3vw);
+    border-bottom:1px solid grey;
 }
+
 .profile__navigation__list{
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
     height: 100%;
     padding:0;
 }
 
 .profile__navigation__item{
     list-style: none;
+    width: 33.33%;
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 2em 0 2em;
+    justify-content: center;
 }
 
 .profile__navigation__item:hover{
@@ -146,4 +169,25 @@
 .profile__edit__modal__form__submit__button{
     background-color:rgba(29,161,242,1) !important;
     color:white;
+}
+
+@media(max-width:1024px){
+    .profile{
+        width: 70%;
+    }
+}
+
+@media(max-width:768px){
+    .profile__banner{
+        height: 40vh;
+    }
+    .profile__banner__details{
+        height:max(20vh,25%);
+    }
+}
+
+@media(max-width:576px){
+    .profile{
+        width: 85%;
+    }
 }

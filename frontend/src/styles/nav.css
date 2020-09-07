@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+.nav{
+    width:33%;
+    height:100vh;
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+}
 .nav-hover:hover{
     background-color: rgba(29,161,242,0.3);
     color:rgba(29,161,242,1) !important;
@@ -22,4 +30,49 @@
 .nav__link{
     display: flex;
     align-items: center;
+}
+
+.right__aside{
+    width: 33%;
+    height: 100vh;
+}
+
+.nav__link__text{
+    margin-left:1rem;
+}
+
+@media(max-width:1024px){
+    .nav{
+        width: 10%;
+    }
+
+    .nav__icon__div{
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav__link{
+        justify-content: center;
+    }
+
+    .nav__link__text {
+        display: none;
+    }
+
+    .right__aside{
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .not__logged__banner{
+       display: none;
+    }
+    .nav{
+        width: 15%;
+    }
+
+    .nav__icon__div a {
+        padding: 0 !important;
+    }
 }

@@ -30,10 +30,10 @@ function LoggedLinks () {
 
     return (
         [
-            <Link key="home" to="/home" className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><HomeIcon fontSize="large" className="mr-2"/>Home</Link>,
-            <Link key="profile" to={goToUserProfile()} className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><PersonOutlineIcon fontSize="large" className="mr-2" /> Profile</Link>,
-            <Link key="messages" to="/messages" className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><MailOutlineIcon fontSize="large" className="mr-2"/>Messages</Link>,
-            <Link key="loguout" to="/logout" onClick={logout} className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><ExitToAppIcon fontSize="large" className="mr-2" /> Logout</Link>
+            <Link key="home" to="/home" className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><HomeIcon fontSize="large" className=""/><span className="nav__link__text">Home</span></Link>,
+            <Link key="profile" to={goToUserProfile()} className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><PersonOutlineIcon fontSize="large" className="" /><span className="nav__link__text">Profile</span></Link>,
+            <Link key="messages" to="/messages" className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><MailOutlineIcon fontSize="large" className=""/><span className="nav__link__text">Messages</span></Link>,
+            <Link key="loguout" to="/logout" onClick={logout} className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><ExitToAppIcon fontSize="large" className="" /><span className="nav__link__text">Logout</span></Link>
         ]
     );
 }

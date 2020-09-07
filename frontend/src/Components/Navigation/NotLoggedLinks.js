@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 function NotLoggedLinks () {
     return (
         [
-            <Link key="signin" to="/signin" className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><VpnKeyIcon fontSize="large" className="mr-2"/>Sign In</Link>,
-            <Link key="signup" to="/signup" className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><AddIcon fontSize="large" className="mr-2"/>Sign Up</Link>
+            <Link key="signin" to="/signin" className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><VpnKeyIcon fontSize="large" className=""/><span className="nav__link__text">Sign In</span></Link>,
+            <Link key="signup" to="/signup" className="nav-hover nav__font nav__link text-white font-weight-bold w-75 mt-3 p-2"><AddIcon fontSize="large" className=""/><span className="nav__link__text">Sign Up</span></Link>
         ]
     );
 }

@@ -10,3 +10,76 @@
 .signin__title__font{
     font-family: 'Sriracha', cursive;
 }
+
+.not__logged__banner{
+    width:100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(29, 161, 242);
+    position: fixed;
+    z-index:1000;
+    bottom:0px;
+    margin:0;
+
+}
+
+.not__logged__banner__container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.not__logged__banner__container__buttons{
+    width: max(40%,400px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.not__logged__banner__container__button{
+    width: min(300px,40%);
+    height: 4vh;
+    border:1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.8rem,1.25vw,1.25rem);
+    border-radius: 9999px;
+    font-weight: bold;
+    font-family: 'Rowdies', cursive;
+}
+
+.not__logged__banner__container__button:hover{
+    background-color:rgba(29, 161, 242, 0.3);
+}
+
+.not__logged__banner__container__text{
+    width: max(300px,60%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-family: "Roboto" sans-serif;
+   
+}
+.not__logged__banner__container__title{
+    font-size:clamp(1rem,1.5vw,1.5rem);
+   
+}
+
+
+@media(max-width:1024px){
+    .not__logged__banner__container{
+        width: 70%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .not__logged__banner{
+       display: none;
+    }
+}

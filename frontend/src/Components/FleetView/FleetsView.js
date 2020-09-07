@@ -4,7 +4,7 @@ import Fleet from './Fleet';
 
 function FleetsView (props) {
     return(
-        <div className="row">
+        <div className="row p-0 m-0">
             {displayFleetsView(props.fleetsList)}
         </div>
     );

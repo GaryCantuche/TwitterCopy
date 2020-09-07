@@ -7,6 +7,7 @@ import UserFleetsViews from './../Components/Profile/UserFleetsViews/UserFleetsV
 import axios from 'axios';
 import Loading from './../Components/Loading';
 import UserNotFound from '../Components/UserNotFound';
+import ProfileNavigation from '../Components/Profile/ProfileNavigation'
 
 function Profile () {  
     const location = useLocation();
@@ -24,9 +25,12 @@ function Profile () {
                     setUserData(res.data);
                 }
             }).catch(err => {
-                console.log(err);
-                if(err.response.status === 404){
-                    setUserNotFound(true);
+                if(err.response){
+                    if(err.response.status === 404){
+                        setUserNotFound(true);
+                    }else{
+                        console.log('Pepe')
+                    }
                 }
             });
         }
@@ -34,11 +38,13 @@ function Profile () {
 
     if(userData){
         return (
-            <div style={styles} className="container border-left border-right border-secondary">
+            <div className="container profile border-left border-right border-secondary m-0 p-0">
                 <TopBarProfile user={userData.username} />
                 <ProfileBanner user={userData} />
+                <ProfileNavigation />
                 <UserFleetsViews user={userData} location={location.pathname}/>
                 <ProfileEditModal user={userData} />
+                
             </div>
         );
     }else if(userNotFound){
@@ -50,10 +56,6 @@ function Profile () {
             <Loading />
         );
     }
-}
-
-const styles = {
-    width:"33%"
 }
 
 export default Profile;

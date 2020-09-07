@@ -11,6 +11,7 @@ import RightAside from './Components/Navigation/RightAside';
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
 import Profile from './Pages/Profile';
+import NotLoggedBanner from './Components/Auth/NotLoggedBanner';
 
 function App() {
   return (
@@ -34,16 +35,19 @@ function App() {
           <Navigation />
           <Profile />
           <RightAside />
+          <NotLoggedBanner/>
         </Route>
         <Route exact path="/profile/:user/retweets" >
           <Navigation />
           <Profile />
           <RightAside />
+          <NotLoggedBanner/>
         </Route>
         <Route exact path="/profile/:user/pictures" >
           <Navigation />
           <Profile />
           <RightAside />
+          <NotLoggedBanner/>
         </Route>
       </Switch>
     </BrowserRouter>
