@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import {getSessionCookie} from './../../Utils/authUtils';
 import LoggedLinks from './LoggedLinks';
@@ -10,9 +10,8 @@ function Navigation () {
         <div className="nav">
             <div className="w-100 d-flex justify-content-end" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <div className="nav__icon__div">
-                    <div className="mt-3 mb-5">
-                        <TwitterIcon fontSize="large" className="navigation__icons"/>
-                    </div>
+                    <Link to="/home" className="nav__twitter__icon nav__link text-white font-weight-bold mt-3 mb-5"><TwitterIcon fontSize="large" className="navigation__icons  "/></Link>
+
                     {
                         getSessionCookie() ? <LoggedLinks /> : <NotLoggedLinks />
                     }

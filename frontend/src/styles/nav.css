@@ -23,6 +23,17 @@
     color:white;
 }
 
+.nav__twitter__icon{
+    width: 51px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+}
+.nav__twitter__icon:hover{
+    border-radius: 9999px;
+    background-color:rgba(29,161,242,0.3) ;
+}
+
 .nav__font{
     font-family: 'Rowdies', cursive;
     font-size: 20px;

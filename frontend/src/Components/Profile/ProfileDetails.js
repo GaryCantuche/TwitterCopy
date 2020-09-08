@@ -1,7 +1,7 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
-
 import FollowButton from './Followers/FollowButton';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 
 function ProfileDetails (props) {  
     const {user} = useParams();
@@ -14,7 +14,8 @@ function ProfileDetails (props) {
                 
             </div>
             <div className="profile__details__username ml-3 text-white">
-                <h4>{props.user.username}</h4>
+                <h4 className="mr-2 m-0 p-0">{props.user.username}</h4>
+                <span>{props.user.verified ? <VerifiedUserIcon className="fleet__verified__button"/> : ''}</span>
             </div>
             <div className="profile__details__description ml-3 d-flex align-items-center text-white">
                 <p className="profile__details__text">{props.user.description}</p>

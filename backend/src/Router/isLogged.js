@@ -4,7 +4,6 @@ import { isFollowed } from '../Controllers/followButton.controller';
 const router = express.Router();
 
 router.get('/',function(req,res,next){
-    console.log(req.user);
     if(req.isAuthenticated()){
        next();
     }else{
