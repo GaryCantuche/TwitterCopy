@@ -1,5 +1,5 @@
 import express from 'express';
-import User from './../models/user';
+import { isFollowed } from '../Controllers/followButton.controller';
 
 const router = express.Router();
 
@@ -11,21 +11,16 @@ router.get('/',function(req,res,next){
         res.send({isAuthenticated:false});
     }
 },async function(req, res) {
+    //Verifying if user thats already logged is the same that's the user it's in the profile.
     if(req.query.user == req.user.username){
         res.send({
             isLogged:true
         });
     }else{
-        const result = await User.findOne({username:req.query.user});
-        console.log(result);
+        
+        const followed = await isFollowed(req.query.user,req.user.username);
 
-        const followed = result.followers.filter(item => {
-            return item == req.user.username
-        });
-
-        console.log(followed);
-
-        if(followed.length > 0){
+        if(followed){
             res.send({
                 isLogged:false,
                 followed:true
