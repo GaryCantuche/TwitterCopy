@@ -98,13 +98,41 @@
     font-weight: bold;
 }
 
-.profile__edit__not__found{
-    width: 7vw;
+.profile__details__button__followed{
+    background-color: rgba(29,161,242,1);
+    color:white;
+    border:2px solid rgba(29,161,242,1);
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    width: max(100px,7vw);
     height: 5vh;
+    font-size: clamp(1rem,1.25rem,1vw);
+    font-weight: bold;
 }
 
-.profile__edit__button:hover{
+.profile__details__button__followed:hover{
+    background-color: rgb(190, 41, 96);
+    color:white;
+    border:2px solid rgb(190, 41, 96);
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    width: max(100px,7vw);
+    height: 5vh;
+    font-size: clamp(1rem,1.25rem,1vw);
+    font-weight: bold;
+}
+
+.profile__details__button:focus{
+    outline: none;
+}
+
+.profile__details__button:hover{
     background-color:rgba(29,161,242,0.1);
+    text-decoration: underline;
 }
 
 .profile__edit__modal{

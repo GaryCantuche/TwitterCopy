@@ -12,6 +12,7 @@ import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
 import Profile from './Pages/Profile';
 import NotLoggedBanner from './Components/Auth/NotLoggedBanner';
+import { getSessionCookie } from './Utils/authUtils';
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <Navigation />
           <Profile />
           <RightAside />
-          <NotLoggedBanner/>
+          {getSessionCookie() ? '' : <NotLoggedBanner/>}
         </Route>
         <Route exact path="/profile/:user/retweets" >
           <Navigation />
