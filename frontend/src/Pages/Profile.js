@@ -16,7 +16,7 @@ function Profile () {
     const [userNotFound,setUserNotFound] = useState(false);
     useEffect(() => {
         if(!userData) {
-            axios.post(`http://localhost:9000/userData`,{
+            axios.post(`http://192.168.1.101:9000/userData`,{
                 user:user
             },{
                 withCredentials:true

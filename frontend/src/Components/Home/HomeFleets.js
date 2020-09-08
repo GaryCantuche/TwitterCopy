@@ -5,7 +5,7 @@ import axios from 'axios';
 function HomeFleets () {
     const [fleets,setFleets] = useState('');
     useEffect(() => {
-        axios.get('http://localhost:9000/fleetsList',{
+        axios.get('http://192.168.1.101:9000/fleetsList',{
             withCredentials:true
         }).then(res => {
             if(!fleets){

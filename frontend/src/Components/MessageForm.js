@@ -12,7 +12,7 @@ function MessageForm () {
     const onSubmit = (e) => {
         e.preventDefault();
         if(formData !== ''){
-            axios.post('http://localhost:9000/storeMessage',{ 
+            axios.post('http://192.168.1.101:9000/storeMessage',{ 
                 message:formData
             },{
                 withCredentials:true

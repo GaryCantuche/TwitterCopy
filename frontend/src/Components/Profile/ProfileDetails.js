@@ -1,19 +1,50 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 import {useParams} from 'react-router-dom';
 import {getSessionCookie} from './../../Utils/authUtils';
+import axios from 'axios';
 
 function ProfileDetails (props) {  
     const {user} = useParams();
+    const [displayButton,setDisplayButton] = useState(false);
+    const handleFollowButton = (e) => {
+        e.preventDefault();
+        axios.post('http://192.168.1.101:9000/follow',{
+            username:user
+        },{
+            withCredentials:true
+        })
+    }
+
+    useEffect(() => {
+        if(getSessionCookie()){
+            axios.get('http://192.168.1.101:9000/isLogged',{
+                params:{
+                    user:user
+                },
+                withCredentials:true
+            }).then(res => {
+                console.log(res);
+                if(!displayButton){
+                    if(res.data){
+                        setDisplayButton(<button  className="profile__details__button" data-toggle="modal" data-target="#ProfileEditModal">Profile Edit</button>);            
+                    }else{
+                        setDisplayButton(<button  className="profile__details__button" onClick={handleFollowButton}>Follow</button>);
+                    }
+                }
+            });
+            
+        }else{
+            if(!displayButton){
+                setDisplayButton(<div className="profile__edit__not__found"></div>)
+            }
+        }
+    },[user,displayButton]);
 
     return (
         <div className="profile__banner__details">
-            <div className="mr-3 mt-3 d-flex justify-content-end">
+            <div className="profile__banner__button">
                 {
-                    getSessionCookie(user) 
-                        ? 
-                            <button  className="profile__edit__button" data-toggle="modal" data-target="#ProfileEditModal">Profile Edit</button>
-                        :
-                            <div className="profile__edit__not__found"></div>
+                    displayButton
                 }
             </div>
             <div className="profile__details__username ml-3 text-white">
@@ -29,6 +60,4 @@ function ProfileDetails (props) {
         </div>
     );
 }
-
-
 export default ProfileDetails;

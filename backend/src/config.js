@@ -2,12 +2,11 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import passport from 'passport'
 import session from 'express-session';
-import multer from 'multer';
 
 export default (app) => {
     
     const corsOptions = {
-        origin: 'http://localhost:3000',
+        origin: 'http://192.168.1.101:3000',
         credentials: true
     };
     app.use(cors(corsOptions));
@@ -31,3 +30,4 @@ export default (app) => {
     
     
 }
+

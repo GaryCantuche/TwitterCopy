@@ -32,7 +32,7 @@ function ProfileEditModalForm() {
         formData.append('profileImage',profileImage);
         formData.append('bannerImage',bannerImage);
 
-        const uploaded = await axios.post( "http://localhost:9000/uploadProfilePhoto",formData,{
+        const uploaded = await axios.post( "http://192.168.1.101:9000/uploadProfilePhoto",formData,{
             headers:{
                 'content-type': 'multipart/form-data'
             },
@@ -43,7 +43,7 @@ function ProfileEditModalForm() {
     }
 
     const sendProfileValues = async () => {
-        return await axios.post( "http://localhost:9000/uploadProfile",{
+        return await axios.post( "http://192.168.1.101:9000/uploadProfile",{
             profileValues:profileValues
         },{
             withCredentials:true
@@ -60,6 +60,8 @@ function ProfileEditModalForm() {
         }
         
         const uploadedProfileValues = await sendProfileValues();
+
+        console.log(uploadedProfileValues)
 
         if(!uploadedProfileValues.data.isSaved){
             alert('Profile values not been updated');

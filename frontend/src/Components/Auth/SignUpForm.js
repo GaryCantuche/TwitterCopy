@@ -23,7 +23,7 @@ function SignUpForm () {
 
     const onSubmit = (e) => { 
         e.preventDefault();
-        axios.post('http://localhost:9000/signup',{
+        axios.post('http://192.168.1.101:9000/signup',{
             userData:userData
         },{
             withCredentials:true

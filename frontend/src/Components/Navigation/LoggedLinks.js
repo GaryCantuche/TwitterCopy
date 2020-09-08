@@ -16,7 +16,7 @@ function LoggedLinks () {
     const [cookies,setCookie,removeCookie] = useCookies(['user_sid']);
 
     const logout = async () => {
-        await axios.get('http://localhost:9000/logout',{
+        await axios.get('http://192.168.1.101:9000/logout',{
             withCredentials:true
         }).then(res => {
             if(res.data.isLogout){
