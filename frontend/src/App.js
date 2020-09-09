@@ -13,6 +13,7 @@ import SignUp from './Pages/SignUp';
 import Profile from './Pages/Profile';
 import NotLoggedBanner from './Components/Auth/NotLoggedBanner';
 import { getSessionCookie } from './Utils/authUtils';
+import BottomNavigation from './Components/Navigation/BottomNavigation';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
          <Redirect to={"/signin"} />
         </Route>
         <Route exact path="/home" >
+          <BottomNavigation />
           <Navigation />
           <Home/>
           <RightAside />
@@ -33,18 +35,21 @@ function App() {
           <SignUp />
         </Route>
         <Route exact path="/profile/:user" >
+          <BottomNavigation />
           <Navigation />
           <Profile />
           <RightAside />
           {getSessionCookie() ? '' : <NotLoggedBanner/>}
         </Route>
         <Route exact path="/profile/:user/retweets" >
+          <BottomNavigation />
           <Navigation />
           <Profile />
           <RightAside />
           <NotLoggedBanner/>
         </Route>
         <Route exact path="/profile/:user/pictures" >
+          <BottomNavigation />
           <Navigation />
           <Profile />
           <RightAside />
