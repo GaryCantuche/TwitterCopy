@@ -3,6 +3,7 @@
     width: 33%;
 }
 
+
 .profile__topbar__icon{
     color:rgba(29,161,242,1) !important;
     margin-left: 1vh;
@@ -226,10 +227,18 @@
 }
 
 @media(max-width:576px){
+    .profile__topbar{
+        display: none;
+    }
     .profile{
-        width: 85%;
+        width: 100%;
     }
     .profile__avatar__image{
         top:20%;
+    }
+
+    .profile__banner__img{
+        border-top: none;
+        border-bottom: 1px solid grey;
     }
 }

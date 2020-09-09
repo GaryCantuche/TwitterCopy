@@ -58,12 +58,11 @@
 .bottom__nav{
     width: 100%;
     height: 7vh;
-    position: absolute;
-    bottom:0;
     display: none;
-    z-index: 100;
     background-color:rgb(21, 32, 43);
     border-top:1px solid grey;
+    position:sticky;
+    bottom: 0;
 }
 
 .bottom__nav__list{
@@ -115,7 +114,6 @@
        display: none;
     }
     .nav{
-        width: 15%;
         display:none;
     }
 

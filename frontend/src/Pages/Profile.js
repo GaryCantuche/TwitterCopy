@@ -8,6 +8,7 @@ import axios from 'axios';
 import Loading from './../Components/Loading';
 import UserNotFound from '../Components/UserNotFound';
 import ProfileNavigation from '../Components/Profile/ProfileNavigation'
+import BottomNavigation from './../Components/Navigation/BottomNavigation';
 
 function Profile () {  
     const location = useLocation();

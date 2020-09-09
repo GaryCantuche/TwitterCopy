@@ -23,7 +23,6 @@ function App() {
          <Redirect to={"/signin"} />
         </Route>
         <Route exact path="/home" >
-          <BottomNavigation />
           <Navigation />
           <Home/>
           <RightAside />
@@ -35,21 +34,19 @@ function App() {
           <SignUp />
         </Route>
         <Route exact path="/profile/:user" >
-          <BottomNavigation />
           <Navigation />
           <Profile />
           <RightAside />
           {getSessionCookie() ? '' : <NotLoggedBanner/>}
+          <BottomNavigation />
         </Route>
         <Route exact path="/profile/:user/retweets" >
-          <BottomNavigation />
           <Navigation />
           <Profile />
           <RightAside />
           <NotLoggedBanner/>
         </Route>
         <Route exact path="/profile/:user/pictures" >
-          <BottomNavigation />
           <Navigation />
           <Profile />
           <RightAside />
