@@ -51,7 +51,7 @@ function SignInForm () {
                    {dataErrors ? dataErrors : ''}
                 </div>
                 <div className="w-100 d-flex justify-content-center align-items-center">
-                    <button type="submit" className="btn btn-primary">¡Sign Up!</button>
+                    <button type="submit" className="signin__button">¡Sign Up!</button>
                 </div>
                 
             </form>

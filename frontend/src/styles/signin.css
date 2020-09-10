@@ -8,8 +8,54 @@
 }
 
 .signin__title__font{
-    font-family: 'Sriracha', cursive;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
+
+.signin__text__font{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.signin__banner{
+    width: 100%;
+    height: min(31vh,50vh);
+    background-color: rgb(29, 161, 242);
+    color: white;
+    font-size: 1.10rem;
+    font-weight: bold;
+}
+
+
+.signin__banner__text{
+    height: 33.33%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.signin__button{
+    background-color: transparent;
+    color:white;
+    border:2px solid rgba(29,161,242,1);
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    width: max(100px,7vw);
+    height: 5vh;
+    font-size: clamp(1rem,1.25rem,1vw);
+    font-weight: bold;
+}
+
+.signin__button:hover{
+    background-color:rgba(29, 161, 242, 0.3);
+}
+
+.signin__button:focus{
+    outline: none;
+}
+
 
 .not__logged__banner{
     width:100%;
@@ -81,5 +127,46 @@
 @media (max-width: 575.98px) {
     .not__logged__banner{
        display: none;
+    }
+}
+@media (max-width: 1024px) and (max-height:768px) and (orientation: landscape) {
+    .signin__button{
+        height: 6vh !important;
+    }
+}
+
+@media (max-width: 1024px) and (max-height:575.68px) and (orientation: landscape) {
+    .signin{
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+
+        overflow: auto;
+    }
+
+    .signin__information__wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+    }
+
+    .signin__banner{
+        height: 100%;
+    }
+
+    .signin__banner__wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        border: 2px solid red;
+    }
+
+    .signin__button{
+        height: 10vh !important;
+        font-size: clamp(1rem,1.25rem,1vw);
+        font-weight: bold;
+        margin-bottom: 2vh;
     }
 }
