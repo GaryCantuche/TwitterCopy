@@ -26,6 +26,7 @@ function App() {
           <Navigation />
           <Home/>
           <RightAside />
+          <BottomNavigation />
         </Route>
         <Route exact path="/signin" >
           <SignIn />

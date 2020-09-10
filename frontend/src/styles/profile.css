@@ -1,6 +1,9 @@
 
 .profile{
     width: 33%;
+    overflow: scroll;
+    overflow-x: hidden !important;
+    height: 100vh;
 }
 
 
@@ -232,6 +235,7 @@
     }
     .profile{
         width: 100%;
+        
     }
     .profile__avatar__image{
         top:20%;

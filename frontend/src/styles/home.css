@@ -1,8 +1,58 @@
 .home{
     height: 100vh;
     width: 33%;
+    overflow: scroll;
+    overflow-x: hidden !important;
 }
 
+.home__message {
+    height: min(20vh,30%);
+    border-bottom: 5px solid grey;
+}
+
+.home__message__textarea{
+    width: 100%;
+    height: 90%;
+}
+
+.home__message__form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__message__wrapper__textarea{
+    width: 100%;
+    height: 70%;
+}
+
+.home__message__wrapper__button{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home__message__wrapper__button button{
+    margin-right: 1rem;
+    background-color: rgba(29,161,242,1);
+    color:white;
+    border:2px solid rgba(29,161,242,1);
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    width: max(100px,7vw);
+    height: 4vh;
+    font-size: clamp(1rem,1.25rem,1vw);
+    font-weight: bold;
+}
+
+.home__message__wrapper__button button:hover{
+    background-color: rgba(29,161,242,0.7);
+}
 
 @media(max-width:1024px){
     .home{

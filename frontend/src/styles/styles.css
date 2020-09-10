@@ -10,7 +10,6 @@
 
 #root{
     height: 100vh;
-    overflow: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,13 +27,21 @@
 textarea{
     background-color:rgb(21, 32, 43);   
     color: white;
-    border: 0.5px solid white;
-    border-radius: 5px;
-    resize:none;
+    resize: none;
+    border: none;
+    font-family: "Roboto" sans-serif;
+    font-size: 1.25rem;
 }
 
 textarea::placeholder{
     color: grey;
+}
+textarea:focus{
+  outline: none;
+}
+
+textarea:focus::placeholder{
+  color: white;
 }
 
 /* width */

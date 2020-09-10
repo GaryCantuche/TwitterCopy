@@ -27,17 +27,15 @@ function MessageForm () {
     }
     
     return (
-        <div className="row mt-3 tweet-box">
-            <div className="col-sm d-flex justify-content-center align-items-center ">
-                <form className="w-50" onSubmit={onSubmit}>
-                    <div className="form-group w-100">
-                        <textarea value={formData} id="storeFleetTextArea" onChange={onChange} className="w-100 pl-2" placeholder="Post your message..." rows="5"></textarea>
+        <div className="home__message tweet-box">
+                <form className="home__message__form" onSubmit={onSubmit}>
+                    <div className="home__message__wrapper__textarea">
+                        <textarea value={formData} id="storeFleetTextArea" onChange={onChange} className="home__message__textarea pt-4 pl-3" placeholder="What's happening?" rows="5"></textarea>
                     </div>
-                    <div className="form-group w-100 d-flex justify-content-end">
-                        <button type="submit" className="btn btn-primary">Tweet</button>
+                    <div className="home__message__wrapper__button">
+                        <button type="submit">Tweet</button>
                     </div>
                 </form>
-            </div>
         </div>
     );
 }

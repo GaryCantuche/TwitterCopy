@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import TopBar from '../Components/TopBar';
-import MessageForm from '../Components/MessageForm';
+import MessageForm from '../Components/Home/MessageForm';
 import {useHistory} from 'react-router-dom';
 import { getCookie } from 'react-use-cookie';
 import './../styles/home.css';
@@ -21,7 +21,6 @@ function Home () {
             <TopBar text="Home" />            
             <MessageForm />
             <HomeFleets />
-            <BottomNavigation />
         </div>
     );
 }
