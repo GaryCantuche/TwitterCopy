@@ -5,7 +5,6 @@ import {useHistory} from 'react-router-dom';
 import { getCookie } from 'react-use-cookie';
 import './../styles/home.css';
 import HomeFleets from '../Components/Home/HomeFleets';
-import BottomNavigation from './../Components/Navigation/BottomNavigation';
 function Home () {
     const history = useHistory();
     const userUID = getCookie('user_sid');
